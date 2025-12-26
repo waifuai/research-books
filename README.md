@@ -108,4 +108,4 @@ All books in this repository are available under the MIT-0 License.
 
 ---
 
-**Note:** Book folders may contain unpublished research and should be cited appropriately if referenced. Some books are in development with partial content available as chapters are completed.
+**Note:** Some books are in development with partial content available as chapters are completed.
