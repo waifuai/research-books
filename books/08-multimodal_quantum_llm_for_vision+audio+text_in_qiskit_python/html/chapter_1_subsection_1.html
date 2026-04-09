@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 1 Subsection 1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false}
+    ]
+  });"></script>
+<style>
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    background: #1a1a2e;
+  }
+  h1 { color: #e94560; border-bottom: 2px solid #e94560; padding-bottom: 0.3em; }
+  h2 { color: #0f3460; border-bottom: 1px solid #533483; padding-bottom: 0.2em; }
+  h3 { color: #533483; }
+  a { color: #4fc3f7; }
+  code { background: #16213e; padding: 0.2em 0.4em; border-radius: 3px; font-size: 0.9em; }
+  pre { background: #16213e; padding: 1em; border-radius: 6px; overflow-x: auto; }
+  pre code { padding: 0; }
+  blockquote { border-left: 3px solid #533483; margin-left: 0; padding-left: 1em; color: #aaa; }
+  .katex-display { overflow-x: auto; overflow-y: hidden; padding: 0.5em 0; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #333; padding: 0.5em; text-align: left; }
+  th { background: #16213e; }
+  .nav { margin-bottom: 2rem; padding: 1rem; background: #16213e; border-radius: 6px; }
+  .nav a { margin-right: 1em; }
+</style>
+</head>
+<body>
+<div class="nav"><a href="08-multimodal_quantum_llm_for_vision+audio+text_in_qiskit_python.html">08 multimodal quantum llm for vision+audio+text in qiskit python</a> | <a href="README.html">README</a> | <a href="chapter_1_subsection_0.html">chapter 1 subsection 0</a> | <a href="chapter_1_subsection_1.html">chapter 1 subsection 1</a> | <a href="chapter_1_subsection_2.html">chapter 1 subsection 2</a> | <a href="chapter_1_subsection_3.html">chapter 1 subsection 3</a> | <a href="chapter_1_subsection_4.html">chapter 1 subsection 4</a> | <a href="chapter_1_subsection_5.html">chapter 1 subsection 5</a> | <a href="chapter_1_subsection_6.html">chapter 1 subsection 6</a> | <a href="chapter_1_subsection_7.html">chapter 1 subsection 7</a> | <a href="chapter_1_subsection_8.html">chapter 1 subsection 8</a> | <a href="chapter_2_subsection_0.html">chapter 2 subsection 0</a> | <a href="chapter_2_subsection_1.html">chapter 2 subsection 1</a> | <a href="chapter_2_subsection_2.html">chapter 2 subsection 2</a> | <a href="chapter_2_subsection_3.html">chapter 2 subsection 3</a> | <a href="chapter_2_subsection_4.html">chapter 2 subsection 4</a> | <a href="chapter_2_subsection_5.html">chapter 2 subsection 5</a> | <a href="chapter_2_subsection_6.html">chapter 2 subsection 6</a> | <a href="chapter_3_subsection_0.html">chapter 3 subsection 0</a> | <a href="chapter_3_subsection_1.html">chapter 3 subsection 1</a> | <a href="chapter_3_subsection_2.html">chapter 3 subsection 2</a> | <a href="chapter_3_subsection_3.html">chapter 3 subsection 3</a> | <a href="chapter_3_subsection_4.html">chapter 3 subsection 4</a> | <a href="chapter_3_subsection_5.html">chapter 3 subsection 5</a> | <a href="chapter_3_subsection_6.html">chapter 3 subsection 6</a> | <a href="chapter_4_subsection_0.html">chapter 4 subsection 0</a> | <a href="chapter_4_subsection_1.html">chapter 4 subsection 1</a> | <a href="chapter_4_subsection_10.html">chapter 4 subsection 10</a> | <a href="chapter_4_subsection_11.html">chapter 4 subsection 11</a> | <a href="chapter_4_subsection_2.html">chapter 4 subsection 2</a> | <a href="chapter_4_subsection_3.html">chapter 4 subsection 3</a> | <a href="chapter_4_subsection_4.html">chapter 4 subsection 4</a> | <a href="chapter_4_subsection_5.html">chapter 4 subsection 5</a> | <a href="chapter_4_subsection_6.html">chapter 4 subsection 6</a> | <a href="chapter_4_subsection_7.html">chapter 4 subsection 7</a> | <a href="chapter_4_subsection_8.html">chapter 4 subsection 8</a> | <a href="chapter_4_subsection_9.html">chapter 4 subsection 9</a> | <a href="chapter_5_subsection_0.html">chapter 5 subsection 0</a> | <a href="chapter_5_subsection_1.html">chapter 5 subsection 1</a> | <a href="chapter_5_subsection_2.html">chapter 5 subsection 2</a> | <a href="chapter_5_subsection_3.html">chapter 5 subsection 3</a> | <a href="chapter_5_subsection_4.html">chapter 5 subsection 4</a> | <a href="chapter_5_subsection_5.html">chapter 5 subsection 5</a> | <a href="chapter_5_subsection_6.html">chapter 5 subsection 6</a> | <a href="chapter_6_sub_section_0.html">chapter 6 sub section 0</a> | <a href="chapter_6_subsection_1.html">chapter 6 subsection 1</a> | <a href="chapter_6_subsection_2.html">chapter 6 subsection 2</a> | <a href="chapter_6_subsection_3.html">chapter 6 subsection 3</a> | <a href="chapter_6_subsection_4.html">chapter 6 subsection 4</a> | <a href="chapter_6_subsection_5.html">chapter 6 subsection 5</a> | <a href="chapter_7_subsection_0.html">chapter 7 subsection 0</a> | <a href="chapter_7_subsection_1.html">chapter 7 subsection 1</a> | <a href="chapter_7_subsection_2.html">chapter 7 subsection 2</a> | <a href="chapter_7_subsection_3.html">chapter 7 subsection 3</a> | <a href="chapter_7_subsection_6.html">chapter 7 subsection 6</a> | <a href="chapter_7_subsection_7.html">chapter 7 subsection 7</a></div>
+<h2 id="what-is-quantum-machine-learning">What is Quantum Machine Learning?</h2>
+<p><a href="#table-of-contents">Table of Contents</a></p>
+<h2 id="what-is-quantum-machine-learning_1">What is Quantum Machine Learning?</h2>
+<p>This section provides a foundational understanding of Quantum Machine Learning (QML), crucial for grasping its application within the multimodal framework of this book. We delve into the core concepts of classical machine learning, highlighting the limitations that quantum computing aims to address.  We then outline the unique potential of QML, emphasizing its theoretical underpinnings.</p>
+<p><strong>Classical Machine Learning: A Brief Overview</strong></p>
+<p>Classical machine learning algorithms are used extensively to analyze and learn from data.  They operate by extracting patterns and features from input data, training models on these features, and then applying these models to new, unseen data to make predictions.  Common examples include linear regression, support vector machines (SVMs), and deep neural networks.</p>
+<p>Classical machine learning algorithms excel at many tasks, but they often face limitations in terms of:</p>
+<ul>
+<li><strong>Computational Complexity:</strong>  As the size and complexity of datasets increase, the computational resources required by classical algorithms can become prohibitive. This is particularly true for high-dimensional data and complex tasks.</li>
+<li><strong>Data Representation:</strong> Transforming raw data into a format usable by classical models can be challenging and often involves significant loss of information.</li>
+<li><strong>Feature Engineering:</strong> The design and selection of relevant features can heavily influence the model's performance, requiring substantial domain expertise and potentially hindering generalizability.</li>
+<li><strong>Data Storage and Processing:</strong>  Classical computations rely on vast quantities of data that often need to be stored and processed across multiple, powerful servers, increasing operational costs and logistical burdens.</li>
+</ul>
+<p><strong>The Quantum Leap: A QML Perspective</strong></p>
+<p>Quantum machine learning leverages the principles of quantum mechanics to develop algorithms for machine learning tasks.  It aims to overcome some of the limitations of classical machine learning by exploiting quantum phenomena like superposition and entanglement.  These phenomena enable:</p>
+<ul>
+<li><strong>Enhanced Computational Power:</strong>  Quantum computers offer the potential to tackle computationally intensive tasks exponentially faster than their classical counterparts, especially for problems involving optimization, pattern recognition, and high-dimensional data analysis.</li>
+<li><strong>Novel Data Representations:</strong> Quantum algorithms can represent data in novel ways, potentially leading to more efficient and insightful feature extraction compared to classical methods.</li>
+<li><strong>Quantum Feature Engineering:</strong> Quantum computing techniques could automate some aspects of feature engineering, making algorithms more robust and adaptable to different data types.</li>
+<li><strong>Improved Pattern Discovery:</strong>  Quantum algorithms could facilitate the discovery of complex patterns and relationships in high-dimensional data that might be missed by classical methods.</li>
+</ul>
+<p><strong>Fundamental Concepts in QML</strong></p>
+<p>Several core concepts underpin QML, including:</p>
+<ul>
+<li><strong>Quantum Circuits:</strong> These are sequences of quantum gates that manipulate quantum bits (qubits).  They form the basis for implementing quantum algorithms within QML models.</li>
+<li><strong>Quantum Superposition:</strong> This allows representing multiple possible states simultaneously, enabling exploration of larger feature spaces compared to classical methods.</li>
+<li><strong>Quantum Entanglement:</strong>  This phenomenon enables correlations between qubits, potentially leading to more efficient representations and computations.</li>
+<li><strong>Quantum Algorithms:</strong> Specific quantum algorithms, such as Grover's algorithm and quantum annealing, are tailored for specific QML tasks.  Examples include feature mapping, quantum kernel methods, and variational quantum algorithms (VQAs).</li>
+</ul>
+<p><strong>QML and Quantum Annealing</strong></p>
+<p>One particular approach within QML involves quantum annealing. Quantum annealing algorithms are often used to find optimal solutions to optimization problems. In QML, these solutions are often used to find optimal parameters in machine learning models or improve model accuracy.</p>
+<p><strong>Why QML with Qiskit?</strong></p>
+<p>This book focuses on Qiskit, an open-source SDK for quantum computing. Qiskit provides tools and libraries to design, implement, and run quantum algorithms on both simulators and real quantum hardware.  Using Qiskit allows readers to transition from theoretical exploration to tangible implementation with ease.</p>
+<p>This section concludes by highlighting the potential for multimodal quantum LLMs in leveraging the unique computational and data processing advantages of QML when working with vision, audio, and text data. The subsequent sections will delve deeper into specific QML algorithms and their application in this multimodal context.</p>
+<p><a id='chapter-1-subchapter-2'></a></p>
+</body>
+</html>
