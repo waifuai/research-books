@@ -703,7 +703,47 @@ This comparative overview clarifies the landscape of existing swap protocols and
 
 ### Design Criteria for Cross-Chain Token Swaps
 
-**Error generating subchapter content: 429 Resource has been exhausted (e.g. check quota).**
+This section establishes the essential design criteria for implementing cross-chain token swaps within the Monero-based bonding curve interswap ecosystem. These criteria serve as the architectural blueprint guiding the development of robust, secure, and efficient swap mechanisms.
+
+**3.2.1 Atomicity and Trustlessness:**
+
+The fundamental requirement for any cross-chain swap protocol is atomicity — the guarantee that either both legs of the swap complete successfully, or neither does. This eliminates counterparty risk and ensures trustless operation:
+
+* **Hash Time-Locked Contracts (HTLCs):** The most widely adopted atomic swap mechanism, HTLCs use cryptographic hash functions and time-locked conditions to ensure that both parties either receive their tokens or get refunded. Monero's scripting capabilities, while more limited than Ethereum's, can support HTLC-based atomic swaps through custom transaction constructions.
+* **Submarine Swaps:** An alternative approach where a trusted third party (or decentralized protocol) facilitates the swap by providing liquidity and managing the timing of transactions. This approach trades some decentralization for improved user experience and faster settlement.
+* **Cross-Chain Bridges:** More complex architectures that maintain synchronized state across multiple blockchains. While offering greater flexibility, bridges introduce additional trust assumptions and attack surface area.
+
+**3.2.2 Privacy Preservation:**
+
+Given Monero's core value proposition of financial privacy, the swap protocol must preserve confidentiality throughout the swap process:
+
+* **Amount Hiding:** Utilizing RingCT to conceal the amounts being swapped, preventing external observers from determining the size of transactions.
+* **Address Obfuscation:** Stealth addresses ensure that the destination addresses for swapped tokens cannot be linked to the participants' public addresses.
+* **Transaction Graph Privacy:** The protocol should prevent correlation attacks that could link swap transactions to specific users or reveal trading patterns.
+
+**3.2.3 Liquidity and Price Discovery:**
+
+Effective swap mechanisms require adequate liquidity and fair price discovery:
+
+* **Bonding Curve Integration:** The bonding curve model provides continuous liquidity by algorithmically determining token prices based on supply. The swap protocol must interface seamlessly with the bonding curve state to execute trades at fair market prices.
+* **Slippage Protection:** Mechanisms to protect traders from significant price movements between order placement and execution, particularly important in low-liquidity environments.
+* **Arbitrage Facilitation:** The protocol should enable arbitrageurs to efficiently correct price discrepancies between different tokens and markets, improving overall market efficiency.
+
+**3.2.4 Scalability and Performance:**
+
+The swap protocol must handle the anticipated transaction volume without degradation:
+
+* **Batch Processing:** Aggregating multiple swaps into single transactions where possible to reduce blockchain load and transaction fees.
+* **Off-Chain Order Matching:** Performing order matching and price discovery off-chain, with only settlement transactions recorded on the Monero blockchain.
+* **State Channel Support:** Where Monero's capabilities permit, state channels can enable high-frequency trading with periodic settlement to the main chain.
+
+**3.2.5 Regulatory Compliance Considerations:**
+
+While privacy is paramount, the design must consider evolving regulatory landscapes:
+
+* **Optional Compliance Features:** Designing the protocol with optional, privacy-preserving compliance mechanisms that can be activated if required by jurisdictional regulations.
+* **Audit Trail Capabilities:** Providing users with the ability to generate voluntary audit trails for their transactions without compromising the default privacy of other participants.
+* **Decentralized Governance:** Implementing governance mechanisms that allow the community to adapt the protocol to changing regulatory requirements without centralized control.
 
 ### Implementing Token Swap Functionality on Monero
 
